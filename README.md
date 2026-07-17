@@ -1,25 +1,30 @@
-# 🎈 Blank app template
+# 📝 AI Content Brief Generator
 
-A simple Streamlit app template for you to modify!
+Generate content briefs, target audience personas, SEO keyword lists, and blog outlines using Groq's Llama models.
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
 
-### How to run it on your own machine
+## Setup
 
-Prerequisite: install `uv` if you don't already have it.
+1. Install `uv` if you don't already have it:
 
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
+
+2. Sync the dependencies:
+
+```bash
+uv sync
 ```
 
-1. Sync the dependencies
+3. Run the app:
 
-   ```
-   $ uv sync
-   ```
+```bash
+uv run streamlit run streamlit_app.py
+```
 
-2. Run the app
+## Configuration
 
-   ```
-   $ uv run streamlit run streamlit_app.py
-   ```
+- Add your `GROQ_API_KEY` to Streamlit Secrets, or enter it in the sidebar when running the app.
+- The app uses `llama-3.3-70b-versatile` by default to generate JSON content briefs.
